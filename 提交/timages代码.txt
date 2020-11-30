@@ -1,0 +1,44 @@
+var timages = {
+            "animation": {
+                "meng4": {
+                    "anitoptobot": [
+                        "images/" + nameSelf + "/" + nameSelf + "_meng4_hua5.png",
+                        "images/" + nameSelf + "/" + nameSelf + "_meng4_hua3.png",
+                    ],
+                },
+                "meng1": {
+                    "anitoptobot": [
+                        "images/" + nameSelf + "/" + nameSelf + "_meng4_hua5.png",
+                        "images/" + nameSelf + "/" + nameSelf + "_meng4_hua3.png",
+                    ],
+                }
+            },
+
+            "meng1": [
+                "images/" + nameSelf + "/" + nameSelf + "_meng1_bg.jpg",
+                "images/" + nameSelf + "/" + nameSelf + "_meng1_border.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng1_yanwu.png",
+            ],
+            "meng2": [
+                "images/" + nameSelf + "/" + nameSelf + "_meng2_bg.gif",
+                "images/" + nameSelf + "/" + nameSelf + "_meng2_hudie.gif",
+            ],
+            "meng3": [
+                "images/" + nameSelf + "/" + nameSelf + "_meng3_bg.gif",
+                "images/" + nameSelf + "/" + nameSelf + "_meng3_bgtop.gif",
+                "images/" + nameSelf + "/" + nameSelf + "_meng3_light.png",
+            ],
+            "meng4": [
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_bg.jpg",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_border.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_teng.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_lian.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_hua1.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_hua2.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_hua3.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_hua4.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_hua5.png",
+                "images/" + nameSelf + "/" + nameSelf + "_meng4_fly.gif",
+            ],
+
+        }

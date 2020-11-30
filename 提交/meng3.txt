@@ -1,0 +1,196 @@
+<script type="text/html" id="meng3">
+        <style>
+            div, body{
+                margin: 0;
+                padding: 0;
+            }
+            .con{
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                perspective: 800px;
+            }
+            .bg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .bgtop{
+                position: absolute;
+                top: -436px;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .userbox1{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                animation: user1 1.5s 2.5s linear both;
+            }
+            @keyframes user1{
+                0%{transform: translateX(0px);}
+                100%{transform: translateX(-700px);}
+            }
+            .userpic1{
+                position: absolute;
+                top: 16vh;
+                left: 109px;
+                width: 500px;
+                height: 700px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                animation: art1 2s linear both;
+            }
+            @keyframes art1{
+                0%{transform: scale(0);}
+                100%{transform: scale(1);}
+            }
+            .userpic11{
+                position: absolute;
+                bottom: -30vh;
+                left: 109px;
+                width: 500px;
+                height: 600px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: .5;
+                animation: art2 1s 1s linear both;
+            }
+            @keyframes art2{
+                0%{transform: rotateX(180deg) scale(0);}
+                100%{transform: rotateX(180deg) scale(1);}
+            }
+            .userbox2{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                animation: user2 1.5s 6.5s linear both;
+            }
+            @keyframes user2{
+                0%{transform: translateX(0px);}
+                100%{transform: translateX(700px);}
+            }
+            .userpic2{
+                position: absolute;
+                top: 16vh;
+                left: 109px;
+                width: 500px;
+                height: 700px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                animation: art1 2s 4s linear both;
+            }
+            .userpic22{
+                position: absolute;
+                bottom: -30vh;
+                left: 109px;
+                width: 500px;
+                height: 600px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: .5;
+                animation: art2 1s 5s linear both;
+            }
+            .userbox3{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                animation: user3 1.5s 10.5s linear both;
+            }
+            @keyframes user3{
+                0%{transform: translateZ(0px);}
+                100%{transform: translateZ(1000px);}
+            }
+            .userpic3{
+                position: absolute;
+                top: 16vh;
+                left: 109px;
+                width: 500px;
+                height: 700px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                animation: art1 2s 8s linear both;
+            }
+            .userpic33{
+                position: absolute;
+                bottom: -30vh;
+                left: 109px;
+                width: 500px;
+                height: 600px;
+                /* border: 10px solid #fff; */
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: .5;
+                animation: art2 1s 9s linear both;
+            }
+            .light{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 60vh;
+                opacity: 1;
+                animation: light 1s linear infinite alternate;
+            }
+            @keyframes light{
+                0%{opacity: 1;}
+                100%{opacity: 0;}
+            }
+        </style>
+        <div class="con">
+            <div class="bg"></div>
+            <div class="bgtop"></div>            
+            <img class="light">
+            <div class="userbox1">
+                <div class="userpic1"></div>
+                <div class="userpic11" id="userpic11"></div>
+            </div>
+            <div class="userbox2">
+                <div class="userpic2"></div>
+                <div class="userpic22" id="userpic22"></div>
+            </div>
+            <div class="userbox3">
+                <div class="userpic3"></div>
+                <div class="userpic33" id="userpic33"></div>
+            </div>
+        </div>
+        <script>
+            $(function (){
+                $('.bg').css("background-image","url("+ timages['meng3'][0] +")");
+                $('.bgtop').css("background-image","url("+ timages['meng3'][1] +")");
+                $('.light').attr("src", timages['meng3'][2] );
+                $('div[class^="userpic"]').css("background-image", "url("+ images_update +")").attr('data-bg',images_update)
+                $('div[class^="userpic"]').click(function(){
+                    preview($(this).attr('data-bg'));
+                })
+            })
+            document.getElementById("userpic11").style.backgroundImage = "linear-gradient(to top, rgba(255,255,255,.8), rgba(255,255,255,0)), url("+ images_update +")";
+            document.getElementById("userpic22").style.backgroundImage = "linear-gradient(to top, rgba(255,255,255,.8), rgba(255,255,255,0)), url("+ images_update +")";
+            document.getElementById("userpic33").style.backgroundImage = "linear-gradient(to top, rgba(255,255,255,.8), rgba(255,255,255,0)), url("+ images_update +")";
+        </script>
+    </script>

@@ -1,0 +1,14 @@
+场景顺序：
+	["meng4", "meng1", "meng2", "meng3"]
+       
+PS： "meng1"和"meng4"要添加小动画 "anitoptobot"
+
+
+
+模板名称
+    梦回仙境
+
+音乐链接
+       https://www.kuwo.cn/play_detail/5237999
+
+

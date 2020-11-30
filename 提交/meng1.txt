@@ -1,0 +1,167 @@
+<script type="text/html" id="meng1">
+        <style>
+            div, body{
+                margin: 0;
+                padding: 0;
+            }
+            .con{
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                perspective: 800px;
+            }
+            .aixinBox{pointer-events: none;}
+            .bg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .userbox{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                transform-style: preserve-3d;
+            }
+            .user1{
+                position: absolute;
+                top: -80vh;
+                left: 36px;
+                width: 100vw;
+                height: 100vh;
+                /* transform: translateY(70vh) rotateX(0deg) rotateZ(0deg) scale(1); */
+                animation: art1 5s 8s linear both; 
+            }
+            @keyframes art1{
+                0%{transform: translateY(0vh) rotateX(-8deg) rotateZ(-15deg) scale(.8); }
+                25%{transform: translateY(40vh) rotateX(-4deg) rotateZ(-10deg) scale(.9); }
+                50%{transform: translateY(70vh) rotateX(0deg) rotateZ(0deg) scale(1); }
+                100%{transform: translateY(160vh) rotateX(-12deg) rotateZ(10deg) scale(.9); }
+            }
+            .user2{
+                position: absolute;
+                top: -80vh;
+                left: 36px;
+                width: 100vw;
+                height: 100vh;
+                animation: art2 10s linear both; 
+            }
+            @keyframes art2{
+                0%{transform: translateY(0vh) rotateX(-8deg) rotateY(15deg) rotateZ(-15deg) scale(.8); }
+                25%{transform: translateY(40vh) rotateX(-4deg) rotateY(0deg) rotateZ(-10deg) scale(.9); }
+                50%{transform: translateY(70vh) rotateX(0deg) rotateY(-5deg) rotateZ(0deg) scale(1); }
+                51%{transform: translateY(70vh) rotateX(0deg) rotateY(-5deg) rotateZ(0deg) scale(1); }
+                100%{transform: translateY(160vh) rotateX(-12deg) rotateY(-10deg) rotateZ(10deg) scale(.9); }
+            }
+            .userpic{
+                position: absolute;
+                top: 36px;
+                left: 20px;
+                width: 600px;
+                height: 900px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .border{
+                position: absolute;
+                top: 8px;
+                left: -444px;
+                width: 1123px;
+                height: 1531px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                pointer-events: none;
+            }
+            .yan1{
+                position: absolute;
+                top: 20vh;
+                left: 0;
+                width: 100vw;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: 1;
+                /* transform: translateX(540px) */
+                animation: yan1 5s linear infinite both;
+            }
+            .yan2{
+                position: absolute;
+                top: 20vh;
+                left: 0;
+                width: 60vw;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: 1;
+                animation: yan1 5s 1s linear infinite both;
+            }
+            .yan3{
+                position: absolute;
+                top: 20vh;
+                left: 0;
+                width: 80vw;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                opacity: 1;
+                animation: yan1 5s 2s linear infinite both;
+            }
+            @keyframes yan1{
+                0%{transform: translateX(-540px) translateZ(-200px);}
+                100%{transform: translateX(500px) translateZ(-200px);}
+            }
+        </style>
+        <div class="con">
+            <div class="bg"></div>
+            <img class="yan1">
+            <img class="yan2">
+            <img class="yan3">
+            <div class="userbox">
+                <div class="user1">
+                    <div class="userpic"></div>
+                    <div class="border"></div>
+                </div>
+                <div class="user2">
+                    <div class="userpic"></div>
+                    <div class="border"></div>
+                </div>
+            </div>
+            <div class="aixinBox"></div>
+        </div>
+        <script>
+            $(function (){
+                $('.bg').css("background-image","url("+ timages['meng1'][0] +")");
+                $('.border').css("background-image","url("+ timages['meng1'][1] +")");
+                $('img[class^="yan"]').attr("src", timages['meng1'][2] );
+                $('.userpic').css("background-image", "url("+ images_update +")").attr('data-bg',images_update)
+                $('.userpic').click(function(){
+                    preview($(this).attr('data-bg'));
+                })
+
+                // 判断 添加动画
+                if(timages.animation){
+                    if(timages.animation['meng1']){
+                        var xdani = timages.animation['meng1']
+                        for(k in xdani){
+                            var hu = $("#" + k).html()
+                            // console.log(hu)
+                            aniArrImg = xdani[k]
+                            if(k=="anitoptobot"){
+                                $(".aixinBox").append(hu)
+                            }else{
+                                $(".bg").append(hu)
+                            }
+                        }
+                    }
+                }
+            })
+        </script>
+    </script>

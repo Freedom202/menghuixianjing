@@ -1,0 +1,360 @@
+<script type="text/html" id="meng4">
+        <style>
+            div, body{
+                margin: 0;
+                padding: 0;
+            }
+            .con{
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                perspective: 800px;
+            }
+            .bg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .aixinBox{pointer-events: none;}
+            .fly{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                pointer-events: none;
+            }
+
+            /*光点*/
+            #piao {
+                bottom: 0;
+                left: 0;
+                pointer-events: none;
+            }
+            #piao>img {
+                top: 0
+            }
+            .po {
+                position: absolute
+            }
+            @-webkit-keyframes ballup4 {
+                0% {
+                    transform: translate(0,0) rotateX(0);
+                    opacity: 0
+                }
+
+                20% {
+                    opacity: 1
+                }
+
+                80% {
+                    opacity: 1
+                }
+
+                100% {
+                    transform: translate(102px,-976px) rotateX(720deg);
+                    opacity: 0
+                }
+            }
+
+            @keyframes ballup3 {
+                0% {
+                    transform: translate(0,0) rotateY(0);
+                    opacity: 0
+                }
+
+                20% {
+                    opacity: 1
+                }
+
+                80% {
+                    opacity: 1
+                }
+
+                100% {
+                    transform: translate(-202px,-976px) rotateY(682deg);
+                    opacity: 0
+                }
+            }
+
+            @keyframes ballup2 {
+                0% {
+                    transform: translate(0,0) rotateY(0);
+                    opacity: 0
+                }
+
+                20% {
+                    opacity: 1
+                }
+
+                80% {
+                    opacity: 1
+                }
+
+                100% {
+                    transform: translate(-342px,-876px) rotateY(-459deg);
+                    opacity: 0
+                }
+            }
+
+            @keyframes ballup1 {
+                0% {
+                    transform: translate(0,0) rotateX(0);
+                    opacity: 0
+                }
+
+                20% {
+                    opacity: 1
+                }
+
+                80% {
+                    opacity: 1
+                }
+
+                100% {
+                    transform: translate(342px,-876px) rotateX(750deg);
+                    opacity: 0
+                }
+            }
+            /*光点完*/
+
+            /*主体*/
+            .div2_1,.div3_1,.div4_1 {
+                left: 38%;
+                top: -162px
+            }
+            .div5_1{
+                left: 38%;
+                top: -262px
+            }
+
+            .div1_2,.div2_2,.div3_2,.div4_2 {
+                left: 34.5%;
+                top: -100px
+            }
+            .shengzi2 {
+                left: -169px;
+                top: 37.6%;
+                -webkit-transform: rotate(-8deg);
+                -webkit-animation: showsheng2 18s linear both
+            }
+            .shengzi2_0 {
+                width: 425px;
+                height: 154px;
+                right: -368px;
+                top: -260px;
+            }
+            .shengzi2_0>img {
+                right: 0
+            }
+            .shengzi2_1 {
+                left: 280px;
+                top: -260px;
+                -webkit-transform: scale(-1,1) rotate(-4deg)
+            }
+            .shengzi2_2 {
+                left: 1389px;
+                top: -403px;
+                -webkit-transform: scale(-1,1) rotate(18deg)
+            }
+            .div2,.div3,.div4{
+                display: block; width:483px; height: 630px;
+            }
+            .div2 {
+                left: 90px;
+                top: 5px;
+                -webkit-transform-origin: 39% -80px;
+                -webkit-animation: yaohuang 2s ease-in-out infinite alternate both
+            }
+            .div3 {
+                left: 814px;
+                top: 52px;
+                -webkit-transform-origin: 39% -80px;
+                -webkit-animation: yaohuang 2s 2s ease-in-out infinite alternate both
+            }
+            .div4 {
+                left: 1578px;
+                top: 0;
+                -webkit-transform-origin: 38% -80px;
+                -webkit-animation: yaohuang 2s ease-in-out infinite alternate both
+            }
+            .photo_border {
+                top: -188px;
+                left: -247px;
+                width: 747px;
+                height: 960px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                pointer-events: none;
+            }
+            .photo {
+                width: 463px;
+                height: 635px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            @-webkit-keyframes yaohuang {
+                0% {
+                    -webkit-transform: rotate(-4deg)
+                }
+
+                100% {
+                    -webkit-transform: rotate(4deg)
+                }
+            }
+
+            @-webkit-keyframes yaohuang1 {
+                0% {
+                    -webkit-transform: rotate(-4deg) scale(-1,1)
+                }
+
+                100% {
+                    -webkit-transform: rotate(4deg) scale(-1,1)
+                }
+            }
+
+            @-webkit-keyframes showsheng1 {
+                0% {
+                    -webkit-transform: translate(0,0);
+                    opacity: 0
+                }
+
+                10% {
+                    opacity: 1
+                }
+
+                90% {
+                    opacity: 1
+                }
+
+                100% {
+                    -webkit-transform: translate(730px,-9px);
+                    opacity: 0
+                }
+            }
+            @-webkit-keyframes showsheng2{
+                0%
+                {
+                    -webkit-transform:translate(230px,-105.07641921397381px)rotate(-8deg);opacity:0
+                }
+                9%{opacity:1;}
+                20%
+                {
+                    -webkit-transform:translate(-80px,-87.88209606986896px)rotate(-6deg);opacity:1
+                }
+                70%
+                {
+                    -webkit-transform:translate(-895.6px,-288.4825327510917px)rotate(5deg);opacity:1
+                }
+                92%
+                {
+                    -webkit-transform:translate(-1178px,-528.12px)rotate(13deg);opacity:1
+                }
+                100%
+                {
+                    -webkit-transform:translate(-1187px,-544.4200000000001px)rotate(13deg);
+                    opacity:1
+                }
+            }
+        </style>
+        <div class="con">
+            <div class="bg"></div>
+
+            <div class="shengzi2 po">
+                <div class="shengzi2_0 po">
+                    <img class="po teng">
+                </div>
+                <img class="shengzi2_1 po teng">
+                <img class="shengzi2_2 po teng">
+
+                <div  class="div2 po" style="">
+                    <div class="photo page po">
+                        
+                    </div>
+                    <div class="photo_border po">
+                    </div>
+                    <img class="div2_1 po lian" >
+                </div>
+                <div  class="div3 po" style="">
+                    <div class="photo page po">
+                    </div>
+                    <div class="photo_border po">
+                    </div>
+                    <img class="div3_1 po lian" >
+                </div>
+                <div class="div4 po" style="">
+                    <div class="photo page po">
+                    </div>
+                    <div class="photo_border po">
+                    </div>
+                    <img class="div4_1 po lian" >
+                    <img class="div5_1 po lian" >
+                </div>
+            </div>
+
+            <img class="fly">
+            <!-- 光点 -->
+            <div id="piao" class="po">
+                <img class="po hua1" style="width: 31px;left: 218px;animation: ballup2 11546ms 1824ms linear infinite both;">
+                <img class="po hua2" style="width: 38px;left: 320px;animation: ballup4 10360ms 6180ms linear infinite both;">
+                <img class="po hua3" style="width: 34px;left: 488px;animation: ballup1 10469ms 9527ms linear infinite both;">
+                <img class="po hua4" style="width: 30px;left: 6px;animation: ballup1 11141ms 3033ms linear infinite both;">
+                <img class="po hua1" style="width: 33px;left: 293px;animation: ballup4 10692ms 4401ms linear infinite both;">
+                <img class="po hua5" style="width: 35px;left: 484px;animation: ballup1 10208ms 10460ms linear infinite both;">
+                <img class="po hua2" style="width: 38px;left: 433px;animation: ballup3 10862ms 350ms linear infinite both;">
+                <img class="po hua4" style="width: 34px;left: 348px;animation: ballup4 10660ms 6755ms linear infinite both;">
+                <img class="po hua3" style="width: 38px;left: 265px;animation: ballup2 11315ms 8141ms linear infinite both;">
+                <img class="po hua5" style="width: 42px;left: 0px;animation: ballup2 10557ms 1304ms linear infinite both;">
+                <img class="po hua2" style="width: 38px;left: 459px;animation: ballup4 10546ms 4842ms linear infinite both;">
+                <img class="po hua3" style="width: 40px;left: 473px;animation: ballup1 10902ms 11977ms linear infinite both;">
+            </div>
+            <div class="aixinBox"></div>
+        </div>
+        <script>
+            $(function (){
+                $('.bg').css("background-image","url("+ timages['meng4'][0] +")");
+                $('.photo_border').css("background-image","url("+ timages['meng4'][1] +")");
+                $('.teng').attr("src", timages['meng4'][2] );
+                $('.lian').attr("src", timages['meng4'][3] );
+                $('.hua1').attr("src", timages['meng4'][4] );
+                $('.hua2').attr("src", timages['meng4'][5] );
+                $('.hua3').attr("src", timages['meng4'][6] );
+                $('.hua4').attr("src", timages['meng4'][7] );
+                $('.hua5').attr("src", timages['meng4'][8] );
+                $('.fly').attr("src", timages['meng4'][9] );
+
+                $('.photo').css("background-image", "url("+ images_update +")").attr('data-bg',images_update)
+                $('.photo').click(function(){
+                    preview($(this).attr('data-bg'));
+                })
+
+
+                // 判断 添加动画
+                if(timages.animation){
+                    if(timages.animation['meng4']){
+                        var xdani = timages.animation['meng4']
+                        for(k in xdani){
+                            var hu = $("#" + k).html()
+                            // console.log(hu)
+                            aniArrImg = xdani[k]
+                            if(k=="anitoptobot"){
+                                $(".aixinBox").append(hu)
+                            }else{
+                                $(".bg").append(hu)
+                            }
+                        }
+                    }
+                }
+            })
+        </script>
+    </script>
